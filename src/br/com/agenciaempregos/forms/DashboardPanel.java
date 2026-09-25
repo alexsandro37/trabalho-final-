@@ -26,7 +26,11 @@ public class DashboardPanel extends javax.swing.JPanel {
         setBackground(EstiloUtil.COR_FUNDO);
         setPreferredSize(new java.awt.Dimension(900, 550));
 
+<<<<<<< HEAD
         lblTitulo = new javax.swing.JLabel("Exibiçao de dados");
+=======
+        lblTitulo = new javax.swing.JLabel("Dashboard");
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         lblTitulo.setFont(new Font(EstiloUtil.FONTE, Font.BOLD, 22));
         lblTitulo.setBounds(20, 15, 400, 35);
         add(lblTitulo);

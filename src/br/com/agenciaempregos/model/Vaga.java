@@ -8,7 +8,11 @@ public class Vaga {
     private String empresaNome;
     private String area;
     private String descricao;
+<<<<<<< HEAD
     private String status;
+=======
+    private String status; // "Aberta" ou "Fechada"
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
 
     public Vaga(int id, String titulo, int empresaId, String empresaNome, String area, String descricao, String status) {
         this.id = id;

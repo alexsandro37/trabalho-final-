@@ -3,8 +3,11 @@ package br.com.agenciaempregos.forms;
 
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
+<<<<<<< HEAD
 import br.com.agenciaempregos.util.SessaoUsuario;
 import br.com.agenciaempregos.util.PermissaoUtil;
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
 public class ConsultaVagasPanel extends javax.swing.JPanel {
 
     private javax.swing.JLabel lblCabecalho;
@@ -15,7 +18,10 @@ public class ConsultaVagasPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblPesquisa;
     private javax.swing.JTextField txtPesquisa;
     private javax.swing.JButton btnPesquisar;
+<<<<<<< HEAD
     private javax.swing.JButton btnCandidatar;
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
     private javax.swing.JScrollPane scrollTabela;
     private javax.swing.JTable tabela;
     private DefaultTableModel modeloTabela;
@@ -76,11 +82,14 @@ public class ConsultaVagasPanel extends javax.swing.JPanel {
         btnPesquisar.addActionListener(evt -> btnPesquisarActionPerformed(evt));
         add(btnPesquisar);
 
+<<<<<<< HEAD
         btnCandidatar = new javax.swing.JButton("Candidatar-se");
         btnCandidatar.setBounds(20, 140, 140, 30);
         btnCandidatar.addActionListener(evt -> btnCandidatarActionPerformed(evt));
         add(btnCandidatar);
 
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         
 
         
@@ -90,6 +99,7 @@ public class ConsultaVagasPanel extends javax.swing.JPanel {
     
 
     private void onSelecionarLinha(int linha) {
+<<<<<<< HEAD
         idSelecionado = (int) modeloTabela.getValueAt(linha, 0);
     }
 
@@ -136,6 +146,9 @@ public class ConsultaVagasPanel extends javax.swing.JPanel {
     private boolean vagaVisivelParaCandidato(br.com.agenciaempregos.model.Vaga vaga) {
         return SessaoUsuario.isCandidato()
                 && "Aberta".equalsIgnoreCase(vaga.getStatus());
+=======
+      
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
     }
 
     private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,9 +161,13 @@ public class ConsultaVagasPanel extends javax.swing.JPanel {
             resultado = br.com.agenciaempregos.dao.VagaDAO.pesquisarPorArea((String) cmbArea.getSelectedItem());
         }
         for (br.com.agenciaempregos.model.Vaga v : resultado) {
+<<<<<<< HEAD
             if (vagaVisivelParaCandidato(v)) {
                 modeloTabela.addRow(new Object[]{v.getId(), v.getTitulo(), v.getEmpresaNome(), v.getArea(), v.getStatus()});
             }
+=======
+            modeloTabela.addRow(new Object[]{v.getId(), v.getTitulo(), v.getEmpresaNome(), v.getArea(), v.getStatus()});
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         }
     }
 
@@ -159,9 +176,13 @@ public class ConsultaVagasPanel extends javax.swing.JPanel {
     private void carregarTabela() {
         modeloTabela.setRowCount(0);
         for (br.com.agenciaempregos.model.Vaga v : br.com.agenciaempregos.dao.VagaDAO.listar()) {
+<<<<<<< HEAD
             if (vagaVisivelParaCandidato(v)) {
                 modeloTabela.addRow(new Object[]{v.getId(), v.getTitulo(), v.getEmpresaNome(), v.getArea(), v.getStatus()});
             }
+=======
+            modeloTabela.addRow(new Object[]{v.getId(), v.getTitulo(), v.getEmpresaNome(), v.getArea(), v.getStatus()});
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         }
     }
 }

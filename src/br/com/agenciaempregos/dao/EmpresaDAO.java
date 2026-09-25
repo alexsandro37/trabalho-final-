@@ -36,12 +36,18 @@ public class EmpresaDAO {
         return null;
     }
 
+<<<<<<< HEAD
     public static Empresa cadastrar(String nome, String cnpj, String email, String telefone, String emailUsuario) {
         Empresa e = new Empresa(proximoId++, nome, cnpj, email, telefone, emailUsuario);
+=======
+    public static Empresa cadastrar(String nome, String cnpj, String email, String telefone) {
+        Empresa e = new Empresa(proximoId++, nome, cnpj, email, telefone);
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         lista.add(e);
         return e;
     }
 
+<<<<<<< HEAD
     public static Empresa buscarPorEmailUsuario(String emailUsuario) {
         for (Empresa e : lista) {
             if (e.getEmailUsuario() != null && e.getEmailUsuario().equals(emailUsuario)) {
@@ -51,6 +57,8 @@ public class EmpresaDAO {
         return null;
     }
 
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
     public static boolean editar(int id, String nome, String cnpj, String email, String telefone) {
         Empresa e = buscarPorId(id);
         if (e == null) return false;

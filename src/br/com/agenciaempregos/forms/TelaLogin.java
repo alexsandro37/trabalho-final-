@@ -71,11 +71,15 @@ public class TelaLogin extends javax.swing.JFrame {
             return;
         }
 
+<<<<<<< HEAD
         br.com.agenciaempregos.model.Usuario usuario = UsuarioDAO.autenticar(email, senha);
         if (usuario != null) {
             
             br.com.agenciaempregos.util.SessaoUsuario.iniciar(email, usuario.getTipo());
 
+=======
+        if (UsuarioDAO.autenticar(email, senha)) {
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
             TelaPrincipal principal = new TelaPrincipal();
             principal.setVisible(true);
             this.dispose();

@@ -8,16 +8,24 @@ public class Candidato {
     private String email;
     private String telefone;
     private String area;
+<<<<<<< HEAD
     private String emailUsuario;
 
     public Candidato(int id, String nome, String cpf, String email, String telefone, String area, String emailUsuario) {
+=======
+
+    public Candidato(int id, String nome, String cpf, String email, String telefone, String area) {
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
         this.telefone = telefone;
         this.area = area;
+<<<<<<< HEAD
         this.emailUsuario = emailUsuario;
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
     }
 
     public int getId() { return id; }
@@ -38,9 +46,12 @@ public class Candidato {
     public String getArea() { return area; }
     public void setArea(String area) { this.area = area; }
 
+<<<<<<< HEAD
     public String getEmailUsuario() { return emailUsuario; }
     public void setEmailUsuario(String emailUsuario) { this.emailUsuario = emailUsuario; }
 
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
     @Override
     public String toString() { return nome; }
 }

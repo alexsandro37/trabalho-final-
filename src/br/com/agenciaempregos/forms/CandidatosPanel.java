@@ -161,7 +161,11 @@ public class CandidatosPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Preencha todos os campos obrigatorios.", "Atencao", JOptionPane.WARNING_MESSAGE);
             return;
         }
+<<<<<<< HEAD
         br.com.agenciaempregos.dao.CandidatoDAO.cadastrar(txtNome.getText().trim(), txtCpf.getText().trim(), txtEmail.getText().trim(), txtTelefone.getText().trim(), txtArea.getText().trim(), "");
+=======
+        br.com.agenciaempregos.dao.CandidatoDAO.cadastrar(txtNome.getText().trim(), txtCpf.getText().trim(), txtEmail.getText().trim(), txtTelefone.getText().trim(), txtArea.getText().trim());
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         JOptionPane.showMessageDialog(this, "Candidato cadastrado com sucesso.");
         btnLimparActionPerformed(evt);
         carregarTabela();

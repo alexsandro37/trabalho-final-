@@ -1,9 +1,12 @@
 package br.com.agenciaempregos.forms;
 
 import br.com.agenciaempregos.util.EstiloUtil;
+<<<<<<< HEAD
 import br.com.agenciaempregos.util.SessaoUsuario;
 import br.com.agenciaempregos.util.PermissaoUtil;
 import br.com.agenciaempregos.model.TipoUsuario;
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JButton;
@@ -25,7 +28,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         abrirDashboard();
     }
 
+<<<<<<< HEAD
   
+=======
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
     private void initComponents() {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de Agencia de Empregos");
@@ -55,6 +62,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     private void montarMenu() {
+<<<<<<< HEAD
         String[] itens;
         
         if (SessaoUsuario.isAdmin()) {
@@ -77,6 +85,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
             itens = new String[] { "Sair" };
         }
         
+=======
+        String[] itens = {
+            "Painel", "Empresas", "Candidatos", "Vagas",
+            "Consulta de Vagas", "Consulta de Candidatos",
+            "Candidaturas", "Processos Seletivos"
+        };
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         int y = 80;
         for (String item : itens) {
             JButton botao = criarBotaoMenu(item);
@@ -106,6 +121,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         return botao;
     }
+<<<<<<< HEAD
     private void navegar(String tela) {
         if (tela.equals("Sair")) {
             SessaoUsuario.encerrar();
@@ -156,6 +172,37 @@ public class TelaPrincipal extends javax.swing.JFrame {
             case "Perfil Empresa":
                 novoPainel = new DashboardPanel();
                 break;
+=======
+
+    /** Troca a tela exibida em painelConteudo, sem abrir novas janelas. */
+    private void navegar(String tela) {
+        JPanel novoPainel;
+        switch (tela) {
+            case "Dashboard":
+                abrirDashboard();
+                return;
+            case "Empresas":
+                novoPainel = new EmpresasPanel();
+                break;
+            case "Candidatos":
+                novoPainel = new CandidatosPanel();
+                break;
+            case "Vagas":
+                novoPainel = new VagasPanel();
+                break;
+            case "Consulta de Vagas":
+                novoPainel = new ConsultaVagasPanel();
+                break;
+            case "Consulta de Candidatos":
+                novoPainel = new ConsultaCandidatosPanel();
+                break;
+            case "Candidaturas":
+                novoPainel = new CandidaturasPanel();
+                break;
+            case "Processos Seletivos":
+                novoPainel = new ProcessosSeletivosPanel();
+                break;
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
             default:
                 return;
         }

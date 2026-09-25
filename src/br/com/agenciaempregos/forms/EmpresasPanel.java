@@ -151,7 +151,11 @@ public class EmpresasPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Preencha todos os campos obrigatorios.", "Atencao", JOptionPane.WARNING_MESSAGE);
             return;
         }
+<<<<<<< HEAD
         br.com.agenciaempregos.dao.EmpresaDAO.cadastrar(txtNome.getText().trim(), txtCnpj.getText().trim(), txtEmail.getText().trim(), txtTelefone.getText().trim(), "");
+=======
+        br.com.agenciaempregos.dao.EmpresaDAO.cadastrar(txtNome.getText().trim(), txtCnpj.getText().trim(), txtEmail.getText().trim(), txtTelefone.getText().trim());
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         JOptionPane.showMessageDialog(this, "Empresa cadastrada com sucesso.");
         btnLimparActionPerformed(evt);
         carregarTabela();

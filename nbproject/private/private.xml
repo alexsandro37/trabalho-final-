@@ -2,6 +2,22 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group/>
+=======
+        <group>
+            <file>file:/D:/SistemaAgenciaEmpregos/src/br/com/agenciaempregos/forms/CandidatosPanel.java</file>
+            <file>file:/D:/SistemaAgenciaEmpregos/src/br/com/agenciaempregos/forms/ConsultaCandidatosPanel.java</file>
+            <file>file:/D:/SistemaAgenciaEmpregos/src/br/com/agenciaempregos/forms/TelaPrincipal.java</file>
+            <file>file:/D:/SistemaAgenciaEmpregos/src/br/com/agenciaempregos/forms/VagasPanel.java</file>
+            <file>file:/D:/SistemaAgenciaEmpregos/src/br/com/agenciaempregos/forms/TelaLogin.java</file>
+            <file>file:/D:/SistemaAgenciaEmpregos/src/br/com/agenciaempregos/forms/TelaCadastroUsuario.java</file>
+            <file>file:/D:/SistemaAgenciaEmpregos/src/br/com/agenciaempregos/forms/ProcessosSeletivosPanel.java</file>
+            <file>file:/D:/SistemaAgenciaEmpregos/src/br/com/agenciaempregos/forms/EmpresasPanel.java</file>
+            <file>file:/D:/SistemaAgenciaEmpregos/src/br/com/agenciaempregos/forms/DashboardPanel.java</file>
+            <file>file:/D:/SistemaAgenciaEmpregos/src/br/com/agenciaempregos/forms/ConsultaVagasPanel.java</file>
+            <file>file:/D:/SistemaAgenciaEmpregos/src/br/com/agenciaempregos/forms/CandidaturasPanel.java</file>
+        </group>
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
     </open-files>
 </project-private>

@@ -3,8 +3,11 @@ package br.com.agenciaempregos.forms;
 
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
+<<<<<<< HEAD
 import br.com.agenciaempregos.util.SessaoUsuario;
 import br.com.agenciaempregos.util.PermissaoUtil;
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
 
 public class VagasPanel extends javax.swing.JPanel {
 
@@ -34,6 +37,7 @@ public class VagasPanel extends javax.swing.JPanel {
     
     private void carregarComboEmpresas() {
         cmbEmpresa.removeAllItems();
+<<<<<<< HEAD
 
         if (SessaoUsuario.isEmpresa() && SessaoUsuario.getEmpresaAtual() != null) {
             cmbEmpresa.addItem(SessaoUsuario.getEmpresaAtual());
@@ -42,6 +46,8 @@ public class VagasPanel extends javax.swing.JPanel {
             return;
         }
 
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         for (br.com.agenciaempregos.model.Empresa e : br.com.agenciaempregos.dao.EmpresaDAO.listar()) {
             cmbEmpresa.addItem(e);
         }
@@ -49,6 +55,7 @@ public class VagasPanel extends javax.swing.JPanel {
 
     public VagasPanel() {
         initComponents();
+<<<<<<< HEAD
 
         if (!PermissaoUtil.podeAcessarVagas()) {
             return;
@@ -64,6 +71,15 @@ public class VagasPanel extends javax.swing.JPanel {
 
         carregarTabela();
     }
+=======
+        carregarComboEmpresas();
+        cmbStatus.addItem("Aberta");
+        cmbStatus.addItem("Fechada");
+        carregarTabela();
+    }
+
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
     private void initComponents() {
         setLayout(null);
         setPreferredSize(new java.awt.Dimension(900, 550));
@@ -177,14 +193,19 @@ public class VagasPanel extends javax.swing.JPanel {
     private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {
         modeloTabela.setRowCount(0);
         for (br.com.agenciaempregos.model.Vaga v : br.com.agenciaempregos.dao.VagaDAO.pesquisar(txtPesquisa.getText().trim())) {
+<<<<<<< HEAD
             if (SessaoUsuario.isAdmin() || (SessaoUsuario.isEmpresa() && SessaoUsuario.getEmpresaAtual() != null
                     && v.getEmpresaId() == SessaoUsuario.getEmpresaAtual().getId())) {
                 modeloTabela.addRow(new Object[]{v.getId(), v.getTitulo(), v.getEmpresaNome(), v.getArea(), v.getStatus()});
             }
+=======
+            modeloTabela.addRow(new Object[]{v.getId(), v.getTitulo(), v.getEmpresaNome(), v.getArea(), v.getStatus()});
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         }
     }
 
     
+<<<<<<< HEAD
     private boolean vagaSelecionadaPertenceAoUsuario() {
         if (idSelecionado == null) return false;
         br.com.agenciaempregos.model.Vaga vaga =
@@ -197,6 +218,9 @@ public class VagasPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Seu perfil não pode cadastrar vagas.", "Acesso negado", JOptionPane.WARNING_MESSAGE);
             return;
         }
+=======
+    private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         if (txtTitulo.getText().trim().isEmpty() || cmbEmpresa.getSelectedItem() == null) {
             JOptionPane.showMessageDialog(this, "Preencha todos os campos obrigatorios (a vaga precisa estar ligada a uma empresa).", "Atencao", JOptionPane.WARNING_MESSAGE);
             return;
@@ -209,10 +233,13 @@ public class VagasPanel extends javax.swing.JPanel {
     }
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {
+<<<<<<< HEAD
         if (!vagaSelecionadaPertenceAoUsuario()) {
             JOptionPane.showMessageDialog(this, "Você só pode editar vagas da sua empresa.", "Acesso negado", JOptionPane.WARNING_MESSAGE);
             return;
         }
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         if (idSelecionado == null) {
             JOptionPane.showMessageDialog(this, "Selecione uma vaga na tabela para editar.", "Atencao", JOptionPane.WARNING_MESSAGE);
             return;
@@ -229,10 +256,13 @@ public class VagasPanel extends javax.swing.JPanel {
     }
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {
+<<<<<<< HEAD
         if (!vagaSelecionadaPertenceAoUsuario()) {
             JOptionPane.showMessageDialog(this, "Você só pode excluir vagas da sua empresa.", "Acesso negado", JOptionPane.WARNING_MESSAGE);
             return;
         }
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         if (idSelecionado == null) {
             JOptionPane.showMessageDialog(this, "Selecione uma vaga na tabela para excluir.", "Atencao", JOptionPane.WARNING_MESSAGE);
             return;
@@ -259,10 +289,14 @@ public class VagasPanel extends javax.swing.JPanel {
     private void carregarTabela() {
         modeloTabela.setRowCount(0);
         for (br.com.agenciaempregos.model.Vaga v : br.com.agenciaempregos.dao.VagaDAO.listar()) {
+<<<<<<< HEAD
             if (SessaoUsuario.isAdmin() || (SessaoUsuario.isEmpresa() && SessaoUsuario.getEmpresaAtual() != null
                     && v.getEmpresaId() == SessaoUsuario.getEmpresaAtual().getId())) {
                 modeloTabela.addRow(new Object[]{v.getId(), v.getTitulo(), v.getEmpresaNome(), v.getArea(), v.getStatus()});
             }
+=======
+            modeloTabela.addRow(new Object[]{v.getId(), v.getTitulo(), v.getEmpresaNome(), v.getArea(), v.getStatus()});
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         }
     }
 }

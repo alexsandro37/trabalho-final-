@@ -3,8 +3,11 @@ package br.com.agenciaempregos.forms;
 
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
+<<<<<<< HEAD
 import br.com.agenciaempregos.util.SessaoUsuario;
 import br.com.agenciaempregos.util.PermissaoUtil;
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
 
 public class ProcessosSeletivosPanel extends javax.swing.JPanel {
 
@@ -24,11 +27,14 @@ public class ProcessosSeletivosPanel extends javax.swing.JPanel {
 
     public ProcessosSeletivosPanel() {
         initComponents();
+<<<<<<< HEAD
 
         if (!PermissaoUtil.podeAcessarProcessosSeletivos()) {
             btnAtualizarStatus.setEnabled(false);
             return;
         }
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         cmbStatus.addItem(br.com.agenciaempregos.model.Candidatura.STATUS_REALIZADA);
         cmbStatus.addItem(br.com.agenciaempregos.model.Candidatura.STATUS_EM_ANALISE);
         cmbStatus.addItem(br.com.agenciaempregos.model.Candidatura.STATUS_EM_PROCESSO);
@@ -93,14 +99,18 @@ public class ProcessosSeletivosPanel extends javax.swing.JPanel {
     // </editor-fold>
 
     private void btnAtualizarStatusActionPerformed(java.awt.event.ActionEvent evt) {
+<<<<<<< HEAD
         if (!PermissaoUtil.podeAcessarProcessosSeletivos()) {
             JOptionPane.showMessageDialog(this, "Acesso negado.", "Acesso negado", JOptionPane.WARNING_MESSAGE);
             return;
         }
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         if (idSelecionado == null) {
             JOptionPane.showMessageDialog(this, "Selecione uma candidatura na tabela para atualizar o status.", "Atencao", JOptionPane.WARNING_MESSAGE);
             return;
         }
+<<<<<<< HEAD
         br.com.agenciaempregos.model.Candidatura candidatura =
                 br.com.agenciaempregos.dao.CandidaturaDAO.buscarPorId(idSelecionado);
         if (candidatura == null || !PermissaoUtil.empresaPodeVer(candidatura)) {
@@ -108,6 +118,8 @@ public class ProcessosSeletivosPanel extends javax.swing.JPanel {
             return;
         }
 
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         br.com.agenciaempregos.dao.CandidaturaDAO.atualizarStatus(idSelecionado, (String) cmbStatus.getSelectedItem());
         JOptionPane.showMessageDialog(this, "Status atualizado com sucesso.");
         carregarTabela();
@@ -121,7 +133,10 @@ public class ProcessosSeletivosPanel extends javax.swing.JPanel {
         modeloTabela.setRowCount(0);
         String t = txtPesquisa.getText().trim().toLowerCase();
         for (br.com.agenciaempregos.model.Candidatura c : br.com.agenciaempregos.dao.CandidaturaDAO.listar()) {
+<<<<<<< HEAD
             if (!PermissaoUtil.empresaPodeVer(c)) continue;
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
             if (c.getCandidatoNome().toLowerCase().contains(t) || c.getVagaTitulo().toLowerCase().contains(t)) {
                 modeloTabela.addRow(new Object[]{c.getId(), c.getCandidatoNome(), c.getVagaTitulo(), c.getEmpresaNome(), c.getStatus()});
             }
@@ -133,9 +148,13 @@ public class ProcessosSeletivosPanel extends javax.swing.JPanel {
     private void carregarTabela() {
         modeloTabela.setRowCount(0);
         for (br.com.agenciaempregos.model.Candidatura c : br.com.agenciaempregos.dao.CandidaturaDAO.listar()) {
+<<<<<<< HEAD
             if (PermissaoUtil.empresaPodeVer(c)) {
                 modeloTabela.addRow(new Object[]{c.getId(), c.getCandidatoNome(), c.getVagaTitulo(), c.getEmpresaNome(), c.getStatus()});
             }
+=======
+            modeloTabela.addRow(new Object[]{c.getId(), c.getCandidatoNome(), c.getVagaTitulo(), c.getEmpresaNome(), c.getStatus()});
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         }
     }
 }

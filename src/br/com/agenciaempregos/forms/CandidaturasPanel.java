@@ -3,8 +3,11 @@ package br.com.agenciaempregos.forms;
 
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
+<<<<<<< HEAD
 import br.com.agenciaempregos.util.SessaoUsuario;
 import br.com.agenciaempregos.util.PermissaoUtil;
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
 
 public class CandidaturasPanel extends javax.swing.JPanel {
 
@@ -39,6 +42,7 @@ public class CandidaturasPanel extends javax.swing.JPanel {
 
     public CandidaturasPanel() {
         initComponents();
+<<<<<<< HEAD
 
         boolean admin = SessaoUsuario.isAdmin();
 
@@ -61,6 +65,9 @@ public class CandidaturasPanel extends javax.swing.JPanel {
         if (admin) {
             carregarCombos();
         }
+=======
+        carregarCombos();
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         carregarTabela();
     }
 
@@ -153,12 +160,16 @@ public class CandidaturasPanel extends javax.swing.JPanel {
         modeloTabela.setRowCount(0);
         String t = txtPesquisa.getText().trim().toLowerCase();
         for (br.com.agenciaempregos.model.Candidatura c : br.com.agenciaempregos.dao.CandidaturaDAO.listar()) {
+<<<<<<< HEAD
             if (!PermissaoUtil.candidatoPodeVer(c) && !PermissaoUtil.empresaPodeVer(c)) {
                 continue;
             }
             if (c.getCandidatoNome().toLowerCase().contains(t)
                     || c.getVagaTitulo().toLowerCase().contains(t)
                     || c.getEmpresaNome().toLowerCase().contains(t)) {
+=======
+            if (c.getCandidatoNome().toLowerCase().contains(t) || c.getVagaTitulo().toLowerCase().contains(t) || c.getEmpresaNome().toLowerCase().contains(t)) {
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
                 modeloTabela.addRow(new Object[]{c.getId(), c.getCandidatoNome(), c.getVagaTitulo(), c.getEmpresaNome(), c.getStatus()});
             }
         }
@@ -166,10 +177,13 @@ public class CandidaturasPanel extends javax.swing.JPanel {
 
     
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {
+<<<<<<< HEAD
         if (!SessaoUsuario.isAdmin()) {
             JOptionPane.showMessageDialog(this, "Somente o administrador pode cadastrar candidaturas por esta tela.", "Acesso negado", JOptionPane.WARNING_MESSAGE);
             return;
         }
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         carregarCombos();
         if (cmbCandidato.getSelectedItem() == null || cmbVaga.getSelectedItem() == null) {
             JOptionPane.showMessageDialog(this, "Cadastre pelo menos um candidato e uma vaga antes de lancar uma candidatura.", "Atencao", JOptionPane.WARNING_MESSAGE);
@@ -187,10 +201,13 @@ public class CandidaturasPanel extends javax.swing.JPanel {
     }
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {
+<<<<<<< HEAD
         if (!SessaoUsuario.isAdmin()) {
             JOptionPane.showMessageDialog(this, "Seu perfil não pode excluir candidaturas.", "Acesso negado", JOptionPane.WARNING_MESSAGE);
             return;
         }
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         if (idSelecionado == null) {
             JOptionPane.showMessageDialog(this, "Selecione uma candidatura na tabela para excluir.", "Atencao", JOptionPane.WARNING_MESSAGE);
             return;
@@ -214,9 +231,13 @@ public class CandidaturasPanel extends javax.swing.JPanel {
     private void carregarTabela() {
         modeloTabela.setRowCount(0);
         for (br.com.agenciaempregos.model.Candidatura c : br.com.agenciaempregos.dao.CandidaturaDAO.listar()) {
+<<<<<<< HEAD
             if (PermissaoUtil.candidatoPodeVer(c) || PermissaoUtil.empresaPodeVer(c)) {
                 modeloTabela.addRow(new Object[]{c.getId(), c.getCandidatoNome(), c.getVagaTitulo(), c.getEmpresaNome(), c.getStatus()});
             }
+=======
+            modeloTabela.addRow(new Object[]{c.getId(), c.getCandidatoNome(), c.getVagaTitulo(), c.getEmpresaNome(), c.getStatus()});
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         }
     }
 }

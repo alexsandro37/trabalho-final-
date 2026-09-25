@@ -31,12 +31,18 @@ public class CandidatoDAO {
         return null;
     }
 
+<<<<<<< HEAD
     public static Candidato cadastrar(String nome, String cpf, String email, String telefone, String area, String emailUsuario) {
         Candidato c = new Candidato(proximoId++, nome, cpf, email, telefone, area, emailUsuario);
+=======
+    public static Candidato cadastrar(String nome, String cpf, String email, String telefone, String area) {
+        Candidato c = new Candidato(proximoId++, nome, cpf, email, telefone, area);
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
         lista.add(c);
         return c;
     }
 
+<<<<<<< HEAD
     public static Candidato buscarPorEmailUsuario(String emailUsuario) {
         for (Candidato c : lista) {
             if (c.getEmailUsuario() != null && c.getEmailUsuario().equals(emailUsuario)) {
@@ -46,6 +52,8 @@ public class CandidatoDAO {
         return null;
     }
 
+=======
+>>>>>>> 359f2641e5ed2ef98d55c2a42e743dff5a2db384
     public static boolean editar(int id, String nome, String cpf, String email, String telefone, String area) {
         Candidato c = buscarPorId(id);
         if (c == null) return false;
