@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Voce pode redefinir alvos do build-impl.xml aqui, sobrescrevendo-os por igual nome. -->
+<project name="SistemaAgenciaEmpregos" default="default" basedir=".">
+    <description>Builds, tests, and runs the project SistemaAgenciaEmpregos.</description>
+    <import file="nbproject/build-impl.xml"/>
+</project>

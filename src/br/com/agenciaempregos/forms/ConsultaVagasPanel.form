@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <NonVisualComponents>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="ffffff" green="ffffff" red="ffffff" type="rgb"/>
+    </Property>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[900, 550]"/>
+    </Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="0" pref="0" max="0" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="0" pref="0" max="0" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="lblCabecalho">
+      <Properties>
+          <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+            <Font name="Segoe UI" size="18" style="1"/>
+          </Property>
+        <Property name="text" type="java.lang.String" value="Consulta de Vagas"/>
+      </Properties>
+      <Constraints layoutClass="org.netbeans.modules.form.compat2.layouts.AbsoluteLayout">
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.AbsoluteLayout">
+          <AbsoluteConstraints x="20" y="15" width="400" height="30"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblArea">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Filtrar por area:"/>
+      </Properties>
+      <Constraints layoutClass="org.netbeans.modules.form.compat2.layouts.AbsoluteLayout">
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.AbsoluteLayout">
+          <AbsoluteConstraints x="20" y="80" width="150" height="18"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="cmbArea">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <Constraints layoutClass="org.netbeans.modules.form.compat2.layouts.AbsoluteLayout">
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.AbsoluteLayout">
+          <AbsoluteConstraints x="20" y="100" width="200" height="26"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblPesquisa">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pesquisar:"/>
+      </Properties>
+      <Constraints layoutClass="org.netbeans.modules.form.compat2.layouts.AbsoluteLayout">
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.AbsoluteLayout">
+          <AbsoluteConstraints x="560" y="142" width="70" height="20"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtPesquisa">
+      <Properties>
+        <Property name="text" type="java.lang.String" value=""/>
+      </Properties>
+      <Constraints layoutClass="org.netbeans.modules.form.compat2.layouts.AbsoluteLayout">
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.AbsoluteLayout">
+          <AbsoluteConstraints x="640" y="140" width="160" height="26"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnPesquisar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buscar"/>
+      </Properties>
+      <Constraints layoutClass="org.netbeans.modules.form.compat2.layouts.AbsoluteLayout">
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.AbsoluteLayout">
+          <AbsoluteConstraints x="810" y="140" width="90" height="30"/>
+        </Constraint>
+      </Constraints>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPesquisarActionPerformed"/>
+      </Events>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="scrollTabela">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+      <Constraints layoutClass="org.netbeans.modules.form.compat2.layouts.AbsoluteLayout">
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.AbsoluteLayout">
+          <AbsoluteConstraints x="20" y="185" width="860" height="380"/>
+        </Constraint>
+      </Constraints>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="tabela">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="5" rowCount="0">
+                <Column editable="true" title="Coluna1" type="java.lang.Object"/>
+                <Column editable="true" title="Coluna2" type="java.lang.Object"/>
+                <Column editable="true" title="Coluna3" type="java.lang.Object"/>
+                <Column editable="true" title="Coluna4" type="java.lang.Object"/>
+                <Column editable="true" title="Coluna5" type="java.lang.Object"/>
+                
+              </Table>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
